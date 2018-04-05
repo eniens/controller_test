@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <!-- <template id="listing"> -->
+        <!--   <ul> -->
+        <!--     <li t-foreach="objects" t-as="object"> -->
+        <!--       <a t-attf-href="#{ root }/objects/#{ object.id }"> -->
+        <!--         <t t-esc="object.display_name"/> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!--   </ul> -->
+        <!-- </template> -->
+        <!-- <template id="object"> -->
+        <!--   <h1><t t-esc="object.display_name"/></h1> -->
+        <!--   <dl> -->
+        <!--     <t t-foreach="object._fields" t-as="field"> -->
+        <!--       <dt><t t-esc="field"/></dt> -->
+        <!--       <dd><t t-esc="object[field]"/></dd> -->
+        <!--     </t> -->
+        <!--   </dl> -->
+        <!-- </template> -->
+
+        <template id="template_testing" name="Teste">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>Ola Mundo!</h1>
+                    <form action="/qqrcoisa/save" method="post">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="text" id="talcoisa" name="talcoisa"></input>
+                        <input type="submit"></input>
+                    </form>
+
+                    <t t-foreach="partners" t-as="partner">
+                        <p><span t-field="partner.name"></span></p>
+                        <p><span t-field="partner.id"></span></p>
+
+                    </t>
+                </div>
+            </div>
+
+        </template>
+    </data>
+</odoo>
